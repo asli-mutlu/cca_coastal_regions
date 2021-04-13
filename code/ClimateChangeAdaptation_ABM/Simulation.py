@@ -3,6 +3,8 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
+import matplotlib
+matplotlib.use('TkAgg')
 
 # User specified inputs
 # Choose agent slr scenario, type of social network, network parameter, and number of simulations
@@ -173,3 +175,4 @@ for sim in range(simulations):
 plt.legend()
 plt.ylabel('Extreme Water Level (m)')
 plt.xlabel('Time (years)')
+plt.show()

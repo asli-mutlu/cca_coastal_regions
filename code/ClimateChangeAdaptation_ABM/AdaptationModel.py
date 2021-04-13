@@ -57,7 +57,7 @@ class AdaptationModel(Model):
         for a in self.agent_list:
             if a.retreated and a in self.schedule.agents:  # Remove retreated agents from model schedule and grid
                 self.schedule.agents.remove(a)
-                self.grid.remove_agent(a)
+                self.grid._remove_agent(a.pos, a)
                 self.num_agents -= 1
         self.datacollector.collect(self)  # collect model level attributes for current time step
         tick += 1
